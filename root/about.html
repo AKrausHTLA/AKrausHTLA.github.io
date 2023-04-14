@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>A Guide to Microtransactions in Video Games - About Microtransactions</title>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<div class="topnav">
+    <a href="http://127.0.0.1:8080/root/index.html">Home</a>
+    <a class="active" href="http://127.0.0.1:8080/root/about.html">About Microtransactions</a>
+    <a href="http://127.0.0.1:8080/root/types.html">Microtransaction Types</a>
+    <a href="http://127.0.0.1:8080/root/survey.html">Survey</a>
+    <a href="http://127.0.0.1:8080/root/blog.html">Dev Blog</a>
+</div>
+
+<div class= "header">
+    <h2>About Microtransactions</h2>
+</div>
+
+<div class= "text1">
+    <p>Microtransactions are a business model that relies on the user purchasing virtual currencies/goods in the form of small payments. This model is typically used by free to play games
+        in order to generate revenue, but it is sometimes also used by paid games to gain additional profit. Microtransactions have been highly profitable, as some of the highest grossing
+        games in the world, such as League of Legends and Fortnite, make use of them.
+    </p>
+    <p>Since the games that feature microtransactions typically are free to play, developers will often employ predatory practices in order to easily compensate for the loss of revenue. Predatory practices
+        are practices that involve developers manipulating their players with deceptive tactics in order to get them to spend more money. The most common form is one in which developers use a gambling mechanic
+        where players will keep spending money on randomly generated loot drops until they get a rare reward. However, the most severe predatory practice tends to be one that involves a pay-to-win mechanic.
+    </p>
+    <p>Pay-to-win is a term used to describe the ability to spend money in order to gain an advantage in a game. This can take the form of locking powerful characters behind a paywall, allowing a player to purchase
+        abilities, and creating a subscription that allows subscribers to gain a massively increased amount of resources, just to name a few.
+    </p>
+    <p>Many developers recently have been focusing on monetizing their game through cosmetics, which provide no in game advantage while still being profitable thanks to their appeal and the marketing
+        strategies that developers use to sell them. This is usually done through first having the user acquire virtual currencies, which can then be spend on these cosmetic items.
+    </p>
+    <p>Continue to Microtransaction Types to see in-depth information about the most common forms of microtransactions that game developers have deployed.</p>
+
+</div>
+</body>
+
+</html>
+<script>
+    window.onload = function() {
+        var viewportwidth;
+        var viewportheight;
+
+        if (typeof window.innerWidth != 'undefined') {
+            viewportwidth = window.innerWidth,
+            viewportheight = window.innerHeight
+        } else if (typeof document.documentElement != 'undefined'
+          && typeof document.documentElement.clientWidth !=
+          'undefined' && document.documentElement.clientWidth != 0) {
+            viewportwidth = document.documentElement.clientWidth,
+            viewportheight = document.documentElement.clientHeight
+        } else {
+            viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
+            viewportheight = document.getElementsByTagName('body')[0].clientHeight
+        }
+        document.body.style.fontSize = viewportheight / 3;
+      }
+ </script>

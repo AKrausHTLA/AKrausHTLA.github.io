@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>A Guide to Microtransactions in Video Games - Survey</title>
+        <style>
+        .text{
+            text-align: center;
+            padding-top: 5px;
+            width: auto;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        </style>
+        <script>
+            window.onload = function() {
+                var viewportwidth;
+                var viewportheight;
+        
+                if (typeof window.innerWidth != 'undefined') {
+                    viewportwidth = window.innerWidth,
+                    viewportheight = window.innerHeight
+                } else if (typeof document.documentElement != 'undefined'
+                  && typeof document.documentElement.clientWidth !=
+                  'undefined' && document.documentElement.clientWidth != 0) {
+                    viewportwidth = document.documentElement.clientWidth,
+                    viewportheight = document.documentElement.clientHeight
+                } else {
+                    viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
+                    viewportheight = document.getElementsByTagName('body')[0].clientHeight
+                }
+                document.body.style.fontSize = viewportheight / 3;
+              }
+         </script>
+    </head>
+<body>
+<script src="PieCharts.js"></script>
+<script src="BarCharts.js"></script>
+<div class="topnav">
+    <a href="http://127.0.0.1:8080/root/index.html">Home</a>
+    <a href="http://127.0.0.1:8080/root/about.html">About Microtransactions</a>
+    <a href="http://127.0.0.1:8080/root/types.html">Microtransaction Types</a>
+    <a class="active" href="http://127.0.0.1:8080/root/survey.html">Survey</a>
+    <a href="http://127.0.0.1:8080/root/blog.html">Dev Blog</a>
+</div>
+
+<div class= "header">
+    <h2>Survey</h2>
+</div>
+
+<div class= "text">
+    <p>I released a survey to the HTLA gaming community in order to better understand the differences in monetization between free-to-play and buy-to-play games, along with learning about the growing amount of unethical
+        practices that are seen in the gaming world. Here is what I found by asking players how much money they spend on different types of video games and what they feel about the money they spent:
+    </p>
+</div>
+
+<div>
+    <canvas id="typeComparison"></canvas>
+</div>
+
+<div class= "text">
+    <p>Out of the 140 responses I collected, 50.7% of players play purchased games while 49.3% of players play free-to-play games. This works out pretty well since I will have a good almost 50-50 split
+        for comparing the two types.
+    </p>
+</div>
+
+<div>
+    <canvas id="spendComparison"></canvas>
+</div>
+
+<div class="text">
+    <p>It makes sense that the same trend was repeated for what players spend the most of their money on.</p>
+</div>
+
+<div class="text">
+    <p>In the next section, I gathered data specifically about free-to-play games.</p>
+</div>
+
+<div>
+    <canvas id="spentOnFreeToPlay"></canvas>
+</div>
+
+<div class="text">
+    <p>This first question asked how much
+        money players spent on free-to-play games annually. I found that 27.9% of players spend no money, 
+        39.3% of players spend $1-$50, 9.3% of players spend $51-$100, 14.3% of players spend $101-$250,
+        5% of players spend $251-$500, 1.4% of players spend $501-750, 0.7% of players spend $751-$1000, 
+        and 2.1% of players spend $1000+. The trend here is that most players spend at least some money on free-to-play games,
+        with the number of players decreasing the more money spent. A majority of players (72.9%) have spent at least some sort of
+        money, so it just goes to show that most of the time, players end up spending money on free-to-play games, despite having no real
+        obligation to do so. 
+    </p>
+</div>
+
+<div class="text">
+    <p>I then asked players to rank from 1-8 how likely they were to spend money on a certain microtransaction. Here's
+        what I found out from 96 responses:
+    </p>
+</div>
+
+<div>
+    <canvas id="cosmetics" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div>
+    <canvas id="battlePasses" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div>
+    <canvas id="contentUnlocks" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div>
+    <canvas id="memberships" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div>
+    <canvas id="plotProgression" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div>
+    <canvas id="randomChance" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div>
+    <canvas id="consumableItems" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div>
+    <canvas id="xpBoosters" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div class="text">
+    <p>I found that most players spend their money on cosmetics, with 31 players ranking cosmetics 1st. 
+        The order then went battle passes at 29, content unlocks at 24, memberships at 10, plot progression 
+        at 8, random chance purchases at 6, consumable items at 5, and XP boosters at 1. This makes sense considering
+        the recent trend of free-to-play games throwing flashy cosmetics and battle passes at their players, with things
+        like consumables and XP boosters becoming more and more niche.
+    </p>
+</div>
+
+<div class="text">
+    <p>I then moved on by asking players to rank how strongly they agreed with several statements.
+
+    </p>
+    <p>My first statement was "I believe that I was manipulated into making many of my purchases through unethical marketing tactics such as
+        taking advantage of the fear of missing out."
+    </p>
+</div>
+
+<div>
+    <canvas id="manipulated"></canvas>
+</div>
+
+<div class="text">
+    <p>Out of the 120 responses I received, 14.2% strongly disagreed, 23.3% disagreed, 30.8% were neutral, 20% agreed, and 11.7% strongly agreed.
+        While the overall trend was that people don't think they are getting manipulated into making their purchases, there is still a sizable amount
+        (31.7%) did agree that they were manipulated at least to some level into making their purchases, which makes sense considering all of the subtle
+        tactics that companies use such as making an item "limited-time" to create a feeling of fear of missing out or throwing their content in bundles
+        to make it all look like one deal that you can't miss out on. 
+    </p>
+</div>
+
+
+<div class="text">
+    <p>The second statement was "I believe that microtransactions are priced fairly."</p>
+</div>
+
+<div>
+    <canvas id="pricedFairly"></canvas>
+</div>
+
+<div class="text">
+    <p>Out of the 135 responses I received, 17.8% strongly disagreed, 39.3% disagreed, 28.9% were neutral, 11.9% agreed, and 2.2% strongly agreed.
+        The overall trend here was that people don't believe that microtransaction prices are fair. This makes sense, as microtransaction prices have been 
+        rising over the years, with quality staying the same or dropping. One example of overpriced microtransactions can be found in Valorant, where a single gun skin
+        can cost anywhere from $10-$30 while a single melee weapon skin can cost anywhere from $20-$50.
+    </p>
+</div>
+
+<div class="text">
+    <p>My third and final statement for this section was "I believe that I got my money's worth out of my microtransaction purchases."</p>
+</div>
+
+<div>
+    <canvas id="moneyWorth"></canvas>
+</div>
+
+<div class="text">
+    <p>Out of the 122 responses I received, 4.9% strongly disagreed, 20.5% disagreed, 41.8% were neutral, 27% agreed, and 5.7% strongly agreed.
+        The overall trend for this final statement was that most people did think they got their money's worth out of their purchases, despite
+        many feeling like the pricing isn't fair. This is quite an interesting find, though not unexpected since the value of a purchased
+        item is subjective. It also makes sense that a large number of people were neutral, as it can be hard to gauge if what you bought was truly worth it,
+        especially when manipulative tactics are involved. 
+    </p>
+</div>
+
+<div class="text">
+    <p>I then wrapped up the section by asking two yes or no questions about general player sentiments related to microtransactions.</p>
+</div>
+
+<div class="text">
+    <p>My first question was "One other tactic used by some free-to-play games is to give you a base game to play and then require spending money to continue 
+        the story after a certain point, often in the form of DLC (downloadable content). Would you say that this tactic is more worth your money than microtransaction purchases?"
+    </p>
+</div>
+
+<div>
+    <canvas id="dlcOverMicro"></canvas>
+</div>
+
+<div class="text">
+    <p>Out of 140 responses, I found that 63.6% said that DLC is more worth it while 36.4% said that DLC is not more worth it. This makes sense as microtransactions in general
+        are much smaller purchases that don't do much at all while paying for additional story content allows you to do a lot more in the game. 
+    </p>
+</div>
+
+<div class="text">
+    <p>I then asked one final question in this section, which said, "Microtransactions have become one of the most profitable business models for gaming companies to date, leading to 
+        companies such as Riot Games earning over a billion dollars annually. Do you believe that the sum that these companies earn from microtransactions is justified?"
+    </p>
+</div>
+
+<div>
+    <canvas id="justifiedEarnings"></canvas>
+</div>
+
+<div class="text">
+    <p>For this final question, I found that 57.9% of players said that they do think it is justified for companies to make so much off of microtransactions, while 42.1% said that it isn't justified
+        for companies to earn a lot of money from microtransactions. This is quite an interesting result as you would expect most people to say that it isn't justified due to the shaky ethics that
+        free-to-play games have, but it is understandable since they made their money in a perfectly legal way. Still, it is evident that there is a lot of disagreement as to if these companies ethically
+        made their money or not as the difference wasn't a total landslide. 
+    </p>
+</div>
+
+<div class="text">
+    <p>The next section asked questions about buy-to-play games in order to compare them to free-to-play games. I started by asking how much money people spend on buy-to-play games.</p>
+</div>
+
+<div>
+    <canvas id="spentOnBuyToPlay"></canvas>
+</div>
+
+<div class="text">
+    <p>I found that out of 140 responses, 15.7% spend no money on buy-to-play games, 24.3% spend $1-$50, 31.4% spend $51-$100, 15.7% spend $101-$250, 9.3% spend $251-$500, 0.7% spend $501-$750,
+        0% spend $751-$1000, and 2.9% spend $1000 or over. The general trend here is that a lot more people spend money on buy-to-play games, typically in values of $500 or less. This makes sense as not
+        only do buy-to-play games have more to offer in terms of content, but they tend to have high upfront costs, with the average AAA game being around $70.
+    </p>
+</div>
+
+<div class="text">
+    <p>I then asked people to rank what type of buy-to-play game they spend most of their money on in order to get a better grasp as to where their money goes in the buy-to-play world. Here's what I found:</p>
+</div>
+
+<div>
+    <canvas id="AAABought" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div>
+    <canvas id="inTheMiddleBought" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div>
+    <canvas id="indieBought" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div>
+    <canvas id="AAASubscription" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<div class="text">
+    <p>I found that out of 114 responses, people spend the most amount of money on AAA Bought Games, which makes sense considering that tends to be the most popular and widespread category. This is followed by In-the-middle Bought Games,
+        then Indie Bought Games, and then finally AAA Subscription Games. AAA Subscription Games have been phasing out over the past several years, with game companies looking to monetize their games in other ways. Therefore, it makes sense that
+        that category ranks last.
+    </p>
+</div>
+
+<div class="text">
+    <p>I then provided another series of statements, asking how much players agreed with them from strongly disagree to strongly agree. These statements asked about general player sentiment about buy-to-play games. Here's what I found:</p>
+</div>
+
+<div class="text">
+    <p>My first statement was "I believe that I got my money's worth out of the games I purchased."</p>
+</div>
+
+<div>
+    <canvas id="moneyWorthBought"></canvas>
+</div>
+
+<div class="text">
+    <p>Out of 140 responses, 5% strongly disagreed, 5.7% disagreed, 25.7% were neutral, 40% agreed, and 23.6% strongly agreed. The trend here is that most people who bought games seem to believe that they got their money's worth out of the games they bought. Meanwhile,
+        most plays disagreed that their microtransactions were worth their money. 
+    </p>
+</div>
+
+<div class="text">
+    <p>My second statement was "Buying games is more worth my money than buying microtransactions."</p>
+</div>
+
+<div>
+    <canvas id="moreWorth"></canvas>
+</div>
+
+<div class="text">
+    <p>For this second statement, 2.9% strongly disagreed, 5.7% disagreed, 42.9% were neutral, 32.1% agreed, and 16.4% strongly agreed. The trend here is that most people agree that buying games is more worth it than buying microtransactions, which makes sense given
+        the previous responses as well.
+    </p>
+</div>
+
+<div class="text">
+    <p>My third and final statement for this section was "Buy-to-play games make their money in a more ethical way than free-to-play games do."</p>
+</div>
+
+<div>
+    <canvas id="moreEthical"></canvas>
+</div>
+
+<div class="text">
+    <p>For this final statement, 3.6% strongly disagreed, 12.1% disagreed, 37.1% were neutral, 34.3% agreed, and 12.9% strongly agreed. It is clear that most people tend to agree that buy-to-play games are more ethical than free-to-play games, which makes sense considering
+        that they tend to use less manipulative tactics as everything they want to sell, you already paid for when you bought the game. 
+    </p>
+</div>
+
+<div class="text">
+    <p>However, despite generally having better practices, there are some buy-to-play games out there that seek to make an additional profit by using microtransactions on top of their usual earnings. My next few questions asked players how they felt about this.</p>
+</div>
+
+<div class="text">
+    <p>The first question here asked "Despite getting a bulk of their revenue from direct transactions, several buy-to-play games still utilize microtransactions to make an additional profit. Do you think it is more justified or less justified for them to do this compared to free-to-play games?</p>
+</div>
+
+<div>
+    <canvas id="microJustified"></canvas>
+</div>
+
+<div class="text">
+    <p>The general trend here is that most players believe that it is less justified for buy-to-play games to use microtransactions, which makes sense considering that they already have an income from the game itself.</p>
+</div>
+
+<div class="text">
+    <p>My next question asked players how much money they spend on microtransactions in buy-to-play games every year.</p>
+</div>
+
+<div>
+    <canvas id="spentOnBuyToPlayMicro"></canvas>
+</div>
+
+<div class="text">
+    <p>From this question, I found that 40% of players don't spend money on microtransactions in buy-to-play games, 35.7% spend $1-$50, 15% spend $51-$100, 5% spend $101-$250, 0.7% spend $251-$500, 1.4% spend $501-$750, another 0.7% spend $751-$1000, and another 1.4% spend $1000 or more.
+        The trend here is that most players spend very little, if not no money at all on microtransactions in buy-to-play games. While part of this is that microtransactions aren't as common in buy-to-play games, it does still show that a lot of players don't find microtransactions in buy-to-play games
+        to be worth their money.
+    </p>
+</div>
+
+<div class="text">
+    <p>To wrap up this survey, I asked these buy-to-play gamers if they think the increase in AAA prices as of late is worth it for the quality of the games that they buy. Here's what I got: </p>
+</div>
+
+<div>
+    <canvas id="increasedPrice"></canvas>
+</div>
+
+<div class="text">
+    <p>Many AAA companies have been jacking up the prices for games recently, using inflation as an excuse to do so. As a result, it comes as no surprise that 33.9% of players believe that the price increase is worth it while a large majority of 66.1% believe that it is not.</p>
+</div>
+
+<div class="text">
+    <p>In conclusion, gamers at HTLA tend to spend less money on free-to-play games than they do on buy-to-play games. With the money that they do spend, they tend to feel more comfortable spending that money on buy-to-play games rather than microtransactions in free-to-play games as 
+        they feel that it is more worth their money to buy games and a good percentage of them believe that buy-to-play games practice better ethics than free-to-play games. In the case that buy-to-play games have microtransactions, HTLA gamers believe that free-to-play microtransactions are 
+        more worth it than buy-to-play microtransactions, likely since they are already spending money on the game itself in buy-to-play games. Additionally, players aren't too fond of the recent price increases in AAA games, which is probably why there was a good chunk of players that believed that
+        both types of games have the same level of ethics. Despite this, the overall trend was in favor of buy-to-play games.
+    </p>
+</div>
+
+</body>
+</html>
